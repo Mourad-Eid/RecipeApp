@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{recipeDetails?.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card >
+    <ion-card-title>{{model.recipeTitle}} </ion-card-title>
+    <ion-card-subtitle>{{model.publisher}}</ion-card-subtitle>
+    <ion-card-content>
+      <img [src] ="model.recipeImg">
+      <br>
+      <ion-item *ngFor="let ingredient of model.ingredients"> {{ingredient}}</ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
