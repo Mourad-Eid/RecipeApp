@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Recipe</ion-title>
+    <ion-title>{{'Home.Title'| translate}}</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content padding>
@@ -18,4 +18,14 @@
       {{item.publisher}}
     </ion-label>
   </ion-item>
+
+  <ion-card (click)="passRecipeFromCard('pizza')">
+    <ion-img src = '/assets/images/pizzaImg.jpg'></ion-img>
+  </ion-card>
+  <ion-card (click)="passRecipeFromCard('chicken')">
+    <ion-img src = '/assets/images/chickenImg.jpg'></ion-img>
+  </ion-card>
+  <ion-card (click)="passRecipeFromCard('ribs')">
+    <ion-img src = '/assets/images/ribsImg.jpg'></ion-img>
+  </ion-card>
 </ion-content>

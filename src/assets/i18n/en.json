@@ -1,0 +1,16 @@
+{
+  "Home": {
+    "Title": "Recipe"
+  },
+  "SideMenu": {
+    "Title" : "Menu",
+    "Logout": "Logout",
+    "Settings": "Settings"
+  },
+  "Settings": {
+    "Title": "Settings",
+    "Language": "Language"
+  }
+
+
+}

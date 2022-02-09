@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { RecipeService } from '../recipe.service';
+import { RecipeService } from '../../services/recipe.service';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +13,9 @@ export class HomePage {
   results: Observable<any>;
   searchTerm = '';
   idFromSearch = {
+    id: ''
+  };
+  listClicked = {
     id: ''
   };
 
@@ -51,6 +54,17 @@ export class HomePage {
       }
     };
     this.router.navigate(['details'], navExtras);
+  }
+
+  passRecipeFromCard(id: string)
+  {
+    this.listClicked.id = id;
+    const navExtras: NavigationExtras = {
+      state: {
+        idFromCardClick: this.listClicked
+      }
+    };
+    this.router.navigate(['recipes-from-cards'], navExtras);
   }
 
   getPotentialQueries(s: string){

@@ -1,0 +1,17 @@
+{
+  "Home": {
+    "Title": "وصفة"
+
+  },
+  "SideMenu": {
+    "Title" : "القائمة",
+    "Logout": "الخروج",
+    "Settings": "الاعدادات"
+  },
+  "Settings": {
+    "Title": "الاعدادات",
+    "Language": "اللغة"
+  }
+
+
+}

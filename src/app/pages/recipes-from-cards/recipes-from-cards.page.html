@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recipes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card button *ngFor="let item of recipesSearched" (click)="passID(item.recipe_id)">
+    <ion-card-content>
+      <img [src] ="item.image_url">
+      <ion-card-title>{{item.title}} </ion-card-title>
+      <ion-card-subtitle>{{item.publisher}}</ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
