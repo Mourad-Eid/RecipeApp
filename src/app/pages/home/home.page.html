@@ -9,15 +9,17 @@
 <ion-content padding>
   <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)"></ion-searchbar>
 
-  <ion-item button *ngFor="let item of (results| async)" (click)="passID(item.recipe_id)" >
-    <ion-avatar slot="start">
-      <img [src] ="item.image_url" *ngIf="'item.image_url != N/A'"/>
-    </ion-avatar>
-    <ion-label text-wrap>
-      <h3>{{item.title}} </h3>
-      {{item.publisher}}
-    </ion-label>
-  </ion-item>
+  <div *ngIf=" searchTerm !== ''">
+    <ion-item button *ngFor="let item of (results| async)" (click)="passID(item.recipe_id)" >
+      <ion-avatar slot="start">
+        <img [src] ="item.image_url" *ngIf="'item.image_url != N/A'"/>
+      </ion-avatar>
+      <ion-label text-wrap>
+        <h3>{{item.title}} </h3>
+        {{item.publisher}}
+      </ion-label>
+    </ion-item>
+  </div>
 
   <ion-card (click)="passRecipeFromCard('pizza')">
     <ion-img src = '/assets/images/pizzaImg.jpg'></ion-img>

@@ -6,12 +6,27 @@
   "SideMenu": {
     "Title" : "القائمة",
     "Logout": "الخروج",
-    "Settings": "الاعدادات"
+    "Settings": "الاعدادات",
+    "AddRecipe": "أضف وصفتك"
+
   },
   "Settings": {
     "Title": "الاعدادات",
-    "Language": "اللغة"
+    "Language": "اللغة",
+    "LanguageOptions": {
+      "English": "الانجليزية",
+      "Arabic" : "العربية"
+    }
+  },
+  "AddRecipe": {
+    "Title" : "أضف وصفة"
+  },
+  "Login": {
+    "Title": "تسجيل الدخول",
+    "Login" : "تسجيل الدخول",
+    "Register": "انشاء حساب",
+    "Email": "البريد  الالكتروني",
+    "Password": "كلمة المرور"
   }
-
 
 }

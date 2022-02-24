@@ -1,9 +1,24 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{'Login.Title'| translate}}</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content class = "ion-padding">
+ <form [formGroup] = "credentials" (ngSubmit)="login()">
+   <ion-item fill=" solid" class ="ion-margin-buttom">
+     <ion-input type="email" placeholder="{{'Login.Email'| translate}}" formControlName="email"></ion-input>
+     <ion-note slot="error" *ngIf="(email.dirty ||email.touched) && email.errors"></ion-note>
+   </ion-item>
+   <ion-item fill=" solid" class ="ion-margin-buttom">
+    <ion-input type="email" placeholder="{{'Login.Password'| translate}}" formControlName="password"></ion-input>
+    <ion-note slot="error" *ngIf="(password.dirty ||password.touched) && password.errors"></ion-note>
+  </ion-item>
 
-<ion-content>
+  <ion-button type="submit" expand="block" [disabled]="!credentials.valid">{{'Login.Login'| translate}}</ion-button>
+  <ion-button type="button" expand="block" color="secondary" (click)="register()">{{'Login.Register'| translate}}</ion-button>
 
+ </form>
 </ion-content>

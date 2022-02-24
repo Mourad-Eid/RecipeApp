@@ -1,12 +1,19 @@
 <ion-header>
   <ion-toolbar color="primary color">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-back-button  defaultHref="/"></ion-back-button>
     </ion-buttons>
     <ion-title>{{'Settings.Title' | translate}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <ion-label>{{'Settings.Language' | translate}}</ion-label>
+    <ion-select [(ngModel)]="selectedLanguage" (ionChange)="changeLanguage($event)">
+      <ion-select-option value="ar">{{'Settings.LanguageOptions.Arabic' | translate}}</ion-select-option>
+      <ion-select-option value="en">{{'Settings.LanguageOptions.English' | translate}}</ion-select-option>
+    </ion-select>
+  </ion-item>
 
 </ion-content>

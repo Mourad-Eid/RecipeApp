@@ -40,7 +40,7 @@ export class HomePage {
 
   searchChanged(event){
     const search =this.getPotentialQueries(this.searchTerm);
-    if(search.length !==0)
+    if(search?.length !==0)
     {
       this.results = this.recipeService.searchData(search);
     }

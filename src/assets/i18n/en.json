@@ -5,11 +5,26 @@
   "SideMenu": {
     "Title" : "Menu",
     "Logout": "Logout",
-    "Settings": "Settings"
+    "Settings": "Settings",
+    "AddRecipe": "Add your recipe"
   },
   "Settings": {
     "Title": "Settings",
-    "Language": "Language"
+    "Language": "Language",
+    "LanguageOptions": {
+      "English": "English",
+      "Arabic" : "Arabic"
+    }
+  },
+  "AddRecipe": {
+    "Title" : "Add Recipe"
+  },
+  "Login": {
+    "Title": "Login",
+    "Login" : "Login",
+    "Register": "Register",
+    "Email": "Email",
+    "Password": "Password"
   }
 
 

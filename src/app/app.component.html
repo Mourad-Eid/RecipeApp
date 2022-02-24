@@ -1,24 +1,32 @@
-<ion-app>
-  <ion-menu content-id ="main">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>{{'SideMenu.Title' | translate}}</ion-title>
-      </ion-toolbar>
-      <ion-content fullscreen = "true">
-        <ion-list  scrollable = "false">
-          <ion-menu-toggle autoHide ="false">
-            <ion-item routerLink = "settings">
-              <ion-label>{{'SideMenu.Settings' | translate}}</ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-          <ion-menu-toggle autoHide ="false">
-            <ion-item>
-              <ion-label>{{'SideMenu.Logout' | translate}}</ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
-      </ion-content>
-    </ion-header>
-  </ion-menu>
-  <ion-router-outlet id = "main"></ion-router-outlet>
-</ion-app>
+<ion-app dir = "{{getLanguageService().textDir}}">
+  <ion-split-pane contentId="main">
+    <ion-menu content-id ="main" side="{{getLanguageService().menuDir}}">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>{{'SideMenu.Title' | translate}}</ion-title>
+        </ion-toolbar>
+        <ion-content fullscreen = "true">
+          <ion-list  scrollable = "false">
+            <ion-menu-toggle autoHide ="false">
+              <ion-item routerLink = "settings">
+                <ion-label>{{'SideMenu.Settings' | translate}}</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle autoHide ="false">
+              <ion-item routerLink = "add-recipe">
+                <ion-label>{{'SideMenu.AddRecipe' | translate}}</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle autoHide ="false">
+              <ion-item (click)="logout()">
+                <ion-icon slot="icon-only" name = "log-out"></ion-icon>
+                <ion-label>{{'SideMenu.Logout' | translate}}</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+        </ion-content>
+      </ion-header>
+    </ion-menu>
+    <ion-router-outlet id = "main"></ion-router-outlet>
+  </ion-split-pane>
+ </ion-app>

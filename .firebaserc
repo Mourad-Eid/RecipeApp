@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "recipe-a73b1": {
+      "hosting": {
+        "app": [
+          "recipe-a73b1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "recipe-a73b1"
+  }
+}
